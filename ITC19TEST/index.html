@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Animal</title>
+    <style>
+      html,
+      body {
+        background-color: rgb(253, 235, 235);
+        margin: 0;
+        padding: 0;
+        position: relative;
+        font-family: "Pattaya", sans-serif;
+        font-family: "Ysabeau", sans-serif;
+      }
+
+      .top-header {
+        background-color: rgb(57, 57, 57);
+        position: fixed;
+        height: 50px;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 99;
+        transition: top 0.3s ease-out;
+      }
+
+      .hide {
+        top: -51px;
+      }
+
+      .menu-item {
+        color: aliceblue;
+        padding: 15px;
+        display: inline-block;
+        text-decoration: none;
+      }
+
+      .more {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .dark-theme {
+        color: aliceblue;
+        background-color: rgb(11, 11, 11);
+      }
+
+      .dark-theme .aniname .anides {
+        color: azure;
+        background-color: rgb(60, 60, 60);
+      }
+
+      .theme-botton {
+        color: rgb(239, 255, 22);
+        display: inline-block;
+      }
+
+      .main-content {
+        max-width: 700px;
+        margin: auto;
+        padding-top: 35px;
+        position: relative;
+      }
+
+      .box {
+        background-color: rgb(237, 237, 237);
+        padding: 20px;
+        margin: 30px;
+        box-shadow: -4px -4px 10px 0px rgb(255, 213, 213),
+          4px 4px 10px 0px rgb(60, 60, 60);
+      }
+
+      .image {
+        width: 100%;
+      }
+
+      .win-image {
+        margin-top: 100px;
+        margin-left: 75px;
+        margin-right: 75px;
+        z-index: 98;
+        position: fixed;
+      }
+
+      .aniname {
+        color: rgb(15, 15, 15);
+        margin-left: 10px;
+      }
+
+      .anides {
+        color: rgb(40, 40, 40);
+        margin-left: 15px;
+      }
+
+      .info-box {
+        color: black;
+        background-color: beige;
+        padding: 10px;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .ref-box {
+        color: black;
+        background-color: beige;
+        padding: 10px;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .scrollTop {
+        color: rgb(255, 156, 27);
+        text-align: center;
+        position: absolute;
+        font-size: 15px;
+        right: 10px;
+        bottom: 140px;
+      }
+
+      .bottom-footer {
+        background-color: rgb(215, 215, 215);
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Ysabeau:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <header class="top-header">
+      <a class="menu-item more" href="#">The Animal</a>
+      <a class="menu-item" href="#">Shop</a>
+      <a class="menu-item" href="#">Contact</a>
+      <a class="theme-botton menu-item" href="#">Change Theme</a>
+      <button onclick="myFunction()">Say Some Thing</button>
+      <div id="Toggle" style="display: none">NOTHING.</div>
+    </header>
+    <div class="win-image">
+      <img class="show-image" src />
+    </div>
+    <div class="main-content">
+      <div class="box">
+        <img class="image" src="lama.jpg" />
+        <h2 class="aniname">Lama with his EPIC hair</h2>
+        <p class="anides">ลามะลาใจกับทรงผมสุดเท่ของเขา</p>
+        <a class="info-box" href="#">Info about Animal</a>
+        <a
+          class="ref-box"
+          href="https://www.pinterest.com/pin/289356344813371346/"
+          target="_blank"
+          >ref</a
+        >
+      </div>
+
+      <div class="box">
+        <img class="image" src="sunmeow.jpg" />
+        <h2 class="aniname">Cat with sunflower</h2>
+        <p class="anides">เมี๊ยว เมี๊ยวกับทานตะวันคู่กาย</p>
+        <a class="info-box" href="#">Info about Animal</a>
+        <a
+          class="ref-box"
+          href="https://www.pinterest.com/pin/21814379437921219/"
+          target="_blank"
+          >ref</a
+        >
+      </div>
+
+      <div class="box">
+        <img class="image" src="Phoenix.jpg" />
+        <h2 class="aniname">Nok-Yang</h2>
+        <p class="anides">ดูเท่แต่จริงๆ เป็นนกย่าง 5 ดาว</p>
+        <a class="info-box" href="#">Info about Animal</a>
+        <a
+          class="ref-box"
+          href="https://www.pinterest.com/pin/522417625539086150/"
+          target="_blank"
+          >ref</a
+        >
+      </div>
+
+      <div class="box">
+        <img class="image" src="lovecat.jpg" />
+        <h2 class="aniname">The Lover Cat</h2>
+        <p class="anides">แมวที่ตกอยู่ในห้วงแห่งความรัก</p>
+        <a class="info-box" href="#">Info about Animal</a>
+        <a
+          class="ref-box"
+          href="https://www.pinterest.com/pin/961659326661763986/"
+          target="_blank"
+          >ref</a
+        >
+      </div>
+
+      <div class="box">
+        <img class="image" src="poda.jpg" />
+        <h2 class="aniname">Podaliza</h2>
+        <p class="anides">โมนาลิซ่า ver.meowmeow guy</p>
+        <a class="info-box" href="#">Info about Animal</a>
+        <a
+          class="ref-box"
+          href="https://www.pinterest.com/pin/26106872832014439/"
+          target="_blank"
+          >ref</a
+        >
+      </div>
+
+      <div class="box">
+        <img class="image" src="jib.jpg" />
+        <h2 class="aniname">JIB</h2>
+        <p class="anides">ลูกเจี๊ยบตัวน้อยที่พร้อมจะจิกคุณ</p>
+        <a class="info-box" href="#">Info about Animal</a>
+        <a
+          class="ref-box"
+          href="https://www.pinterest.com/pin/743094007288451092/"
+          target="_blank"
+          >ref</a
+        >
+      </div>
+
+      <div class="box">
+        <img class="image" src="sloth.jpg" />
+        <h2 class="aniname">ForSalot</h2>
+        <p class="anides">สล็อตตัวน้อยผู้รักป่าไม้</p>
+        <a class="info-box" href="#">Info about Animal</a>
+        <a
+          class="ref-box"
+          href="https://www.pinterest.com/pin/5348093301295781/"
+          target="_blank"
+          >ref</a
+        >
+      </div>
+
+      <div class="box">
+        <img class="image" src="pandy.jpg" />
+        <h2 class="aniname">Pandygar</h2>
+        <p class="anides">แพนดี้หมีน้อยพิทักษ์ป่าพร้อมกับพลังธรรมชาติ</p>
+        <a class="info-box" href="#">Info about Animal</a>
+        <a
+          class="ref-box"
+          href="https://www.pinterest.com/pin/34762228366641360/"
+          target="_blank"
+          >ref</a
+        >
+      </div>
+    </div>
+    <div class="scrollTop">
+      <button>Top</button>
+    </div>
+    <footer class="bottom-footer">
+      <p>About the website</p>
+      <p>Animal copyright</p>
+    </footer>
+    <script language="javascript">
+      //change theme
+      let body = document.body;
+      let themeButton = document.querySelector(".theme-botton");
+
+      themeButton.addEventListener("click", function () {
+        body.classList.toggle("dark-theme");
+      });
+
+      //Scroll
+      let topHeader = document.querySelector(".top-header");
+      let lastScrollY = 0;
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > lastScrollY) {
+          topHeader.classList.add("hide");
+        } else {
+          topHeader.classList.remove("hide");
+        }
+        lastScrollY = window.scrollY;
+      });
+
+      //change image
+      let images = document.querySelectorAll(".image");
+      let winImage = document.querySelector(".show-image");
+
+      function changeImage(event) {
+        winImage.src = event.target.src;
+      }
+
+      function removeImage() {
+        winImage.src = "";
+      }
+
+      images.forEach((thumbnail) => {
+        thumbnail.addEventListener("mouseout", removeImage);
+        thumbnail.addEventListener("mouseover", changeImage);
+      });
+
+      //top
+      const scrollToTop = document.querySelector(".scrollTop");
+
+      scrollToTop.style.backgroundColor = "white";
+      scrollToTop.style.color = "black";
+
+      scrollToTop.addEventListener("click", () => {
+        scrollToTop.scrollIntoView({
+          top: 0,
+          behavior: "smooth",
+          block: "end",
+        });
+      });
+
+      //Hide and show
+      function myFunction() {
+        var x = document.getElementById("Toggle");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+      //style
+      let word = document.getElementById("Toggle");
+      word.style.marginLeft = "10px";
+      word.style.fontSize = "25px";
+    </script>
+  </body>
+</html>
